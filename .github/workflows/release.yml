@@ -1,4 +1,4 @@
-name: Changesets
+name: release
 on:
   push:
     branches:
@@ -27,5 +27,5 @@ jobs:
       - name: Semantic release
         run: pnpm dlx semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
